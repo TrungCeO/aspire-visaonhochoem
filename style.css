@@ -978,3 +978,7 @@ body.zoomed #main-content {
   }
 
 }
+
+body {
+  background: red !important;
+}
