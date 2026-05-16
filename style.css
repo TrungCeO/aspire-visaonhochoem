@@ -835,3 +835,146 @@ body.zoomed #main-content {
     80%  { opacity: 0.8; }
     100% { transform: translateY(-80vh) scale(0.5) rotate(20deg); opacity: 0; }
 }
+
+
+/* ================= MOBILE PRO FIX ================= */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    display: none; /* ẩn menu cho gọn */
+  }
+
+  /* HERO */
+  .glitch-title {
+    font-size: 2.5rem !important;
+    letter-spacing: 2px;
+  }
+
+  .glitch-title.secondary {
+    font-size: 2rem !important;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  /* CARD */
+  .glass-card {
+    padding: 25px 18px !important;
+    border-radius: 18px;
+  }
+
+  .glass-card h2 {
+    font-size: 1.6rem !important;
+  }
+
+  .card-content p {
+    font-size: 1rem;
+  }
+
+  /* MEMBERS */
+  .members-grid {
+    gap: 15px;
+  }
+
+  .member-card {
+    width: 120px;
+    padding: 15px;
+  }
+
+  .member-avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  /* GRID 2 CỘT -> 1 CỘT */
+  .cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* VISION */
+  .highlight-text {
+    font-size: 1.2rem !important;
+  }
+
+  .glowing-orb {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* PLANETS (QUAN TRỌNG) */
+  .sun {
+    width: 120px;
+    height: 120px;
+    top: 15%;
+    left: 55%;
+  }
+
+  .jupiter {
+    width: 100px;
+    height: 100px;
+    top: 65%;
+    left: 5%;
+  }
+
+  .neptune {
+    width: 90px;
+    height: 90px;
+    top: 75%;
+    right: 5%;
+  }
+
+  /* MODAL */
+  .planet-modal.modal-left,
+  .planet-modal.modal-right {
+    justify-content: center;
+    padding: 0 15px;
+  }
+
+  .planet-modal .modal-content {
+    max-width: 100%;
+    padding: 25px;
+  }
+
+  /* DONATION */
+  .donation-card {
+    width: 95% !important;
+    padding: 25px 20px;
+  }
+
+  .qr-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .donor-input {
+    font-size: 16px; /* fix zoom iPhone */
+  }
+
+  /* TOAST */
+  .toast {
+    min-width: unset;
+    width: 90%;
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .toast strong {
+    font-size: 1.1rem;
+  }
+
+  .toast p {
+    font-size: 0.85rem;
+  }
+
+}
