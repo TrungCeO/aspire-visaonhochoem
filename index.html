@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VÌ SAO NHỎ CHO EM - Dự án Thiện nguyện</title>
+    <meta name="description"
+        content="Dự án workshop thiện nguyện Vì Sao Nhỏ Cho Em tại Bệnh viện Phụ Sản - Nhi Đà Nẵng">
+    <link rel="stylesheet" href="style.css?v=25">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="universe" class="universe-container">
+        <div class="background-container"></div>
+        <canvas id="starCanvas"></canvas>
+
+        <!-- Planets -->
+        <div id="planet-sun" class="planet sun" data-target="modal-sun" title="Xem Giới thiệu & Ý nghĩa">
+            <div class="planet-animator"><img src="assets/sun.png?v=12" alt="Mặt Trời"></div>
+        </div>
+        <div id="planet-jupiter" class="planet jupiter" data-target="modal-jupiter" title="Xem Gây quỹ">
+            <div class="planet-animator"><img src="assets/jupiter.png?v=12" alt="Sao Mộc"></div>
+        </div>
+        <div id="planet-neptune" class="planet neptune" data-target="modal-neptune" title="Xem Timeline">
+            <div class="planet-animator"><img src="assets/neptune.png?v=12" alt="Sao Hải Vương"></div>
+        </div>
+    </div>
+
+    <!-- Modals for Planets -->
+    <div id="modal-sun" class="planet-modal hidden-modal modal-left">
+        <div class="modal-content glass-card">
+            <button class="close-btn">&times;</button>
+            <h2>Giới thiệu & Ý nghĩa</h2>
+            <div class="modal-body text-left">
+                <h3>1. Giới thiệu dự án</h3>
+                <p><strong>“Vì Sao Nhỏ Cho Em”</strong> là một dự án workshop thiện nguyện dành cho trẻ em ở Bệnh viện
+                    Phụ Sản - Nhi Đà Nẵng với hoạt động chính là trang trí bình thủy tinh bằng màu nước, giấy màu và đèn
+                    LED để tạo thành đèn ngủ hoặc đèn trang trí thủ công.</p>
+                <p><em>Địa điểm: Khoa Nhi - Tầng 8 Bệnh viện Phụ sản - Nhi Đà Nẵng</em></p>
+
+                <h3 class="mt-4">2. Ý nghĩa dự án</h3>
+                <p>Chiếc đèn nhỏ tượng trưng cho một “vì sao” mang ánh sáng, hy vọng và sự ấm áp dành cho trẻ em.</p>
+                <p>Dự án đồng thời lan tỏa tinh thần sẻ chia và kết nối cộng đồng thông qua hoạt động thiện nguyện kết
+                    hợp nghệ thuật.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-jupiter" class="planet-modal hidden-modal modal-right">
+        <div class="modal-content glass-card">
+            <button class="close-btn">&times;</button>
+            <h2>Lý do & Gây quỹ</h2>
+            <div class="modal-body text-left">
+                <h3>3. Lý do lựa chọn hoạt động</h3>
+                <p>Hoạt động dễ tiếp cận, an toàn và phù hợp với trẻ em. Chi phí nguyên vật liệu thấp, dễ chuẩn bị. Có
+                    tính tương tác và sáng tạo cao. Phù hợp với định hướng nghệ thuật của dự án.</p>
+
+                <h3 class="mt-4">4. Phương án gây quỹ</h3>
+                <ul>
+                    <li><strong>Bán nước gây quỹ:</strong> Trà đào, Trà chanh, Cà Phê, Trà sữa handmade.</li>
+                    <li><strong>Mạng xã hội:</strong> Sử dụng Facebook, Instagram, TikTok để giới thiệu, kêu gọi ủng hộ
+                        và lan tỏa thông điệp.</li>
+                    <li><strong>Tuyển CTV:</strong> Hỗ trợ bán nước, truyền thông và tổ chức workshop.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-neptune" class="planet-modal hidden-modal modal-left">
+        <div class="modal-content glass-card">
+            <button class="close-btn">&times;</button>
+            <h2>Timeline & Thông điệp</h2>
+            <div class="modal-body text-left">
+                <h3>5. Timeline dự án</h3>
+                <ul class="timeline-list">
+                    <li><strong>GĐ 1 – Chuẩn bị:</strong> Hoàn thiện ý tưởng, thiết kế poster, chuẩn bị nguyên liệu.
+                    </li>
+                    <li><strong>GĐ 2 – Gây quỹ:</strong> Tổ chức bán nước, truyền thông, tuyển CTV.</li>
+                    <li><strong>GĐ 3 – Tổ chức:</strong> Hướng dẫn trẻ trang trí đèn, giao lưu, trao quà.</li>
+                    <li><strong>GĐ 4 – Tổng kết:</strong> Đăng bài recap, tổng kết chi phí và kết quả.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content wrapper to hide during zoom -->
+    <div id="main-content">
+        <nav class="navbar">
+            <div class="logo">ASPIRE</div>
+            <ul class="nav-links">
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#members">Thành viên</a></li>
+                <li><a href="#fund">Gây quỹ</a></li>
+                <li><a href="#vision">Thông điệp</a></li>
+            </ul>
+        </nav>
+
+        <main class="container">
+            <!-- Section 1: Hero -->
+            <section id="home" class="section hero-section">
+                <div class="hero-content hidden">
+                    <h1 class="glitch-title" data-text="VÌ SAO NHỎ">VÌ SAO NHỎ</h1>
+                    <h2 class="glitch-title secondary" data-text="CHO EM">CHO EM</h2>
+                    <p class="subtitle">Dự án workshop thiện nguyện nghệ thuật</p>
+                    <p class="hero-desc">Trang trí bình thủy tinh mang ánh sáng hy vọng đến Khoa Nhi - Bệnh viện Phụ Sản
+                        - Nhi Đà Nẵng</p>
+                </div>
+            </section>
+
+            <!-- Section 2: About -->
+            <section id="about" class="section about-section">
+                <div class="glass-card hidden w-full">
+                    <h2>Về Dự Án</h2>
+                    <div class="card-content">
+                        <p><strong>“Vì Sao Nhỏ Cho Em”</strong> hướng đến việc mang lại niềm vui, sự sáng tạo và cảm
+                            giác được yêu thương cho các em nhỏ thông qua hoạt động nghệ thuật nhẹ nhàng và gần gũi.</p>
+                        <p>Thông qua workshop, các em có cơ hội tự do sáng tạo sản phẩm của riêng mình, phát triển khả
+                            năng thẩm mỹ và trí tưởng tượng, đồng thời có thêm trải nghiệm vui chơi và kết nối tinh
+                            thần.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Members -->
+            <section id="members" class="section members-section">
+                <div class="glass-card hidden w-full">
+                    <h2>Đội Ngũ Dự Án - ASPIRE</h2>
+                    <p class="subtitle" style="margin-bottom: 30px; font-size: 1rem;">5 thành viên cùng chung một khát
+                        vọng</p>
+                    <div class="members-grid">
+                        <div class="member-card" style="--animation-order: 1;">
+                            <div class="member-avatar hue-1"><img src="assets/avatar.png" alt="A"></div>
+                            <h3>Thành viên A</h3>
+                            <p class="role">Leader</p>
+                        </div>
+                        <div class="member-card" style="--animation-order: 2;">
+                            <div class="member-avatar hue-2"><img src="assets/avatar.png" alt="B"></div>
+                            <h3>Thành viên B</h3>
+                            <p class="role">Designer</p>
+                        </div>
+                        <div class="member-card" style="--animation-order: 3;">
+                            <div class="member-avatar hue-3"><img src="assets/avatar.png" alt="C"></div>
+                            <h3>Thành viên C</h3>
+                            <p class="role">Developer</p>
+                        </div>
+                        <div class="member-card" style="--animation-order: 4;">
+                            <div class="member-avatar hue-4"><img src="assets/avatar.png" alt="D"></div>
+                            <h3>Thành viên D</h3>
+                            <p class="role">Content</p>
+                        </div>
+                        <div class="member-card" style="--animation-order: 5;">
+                            <div class="member-avatar hue-5"><img src="assets/avatar.png" alt="E"></div>
+                            <h3>Thành viên E</h3>
+                            <p class="role">Marketing</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Fund & Timeline -->
+            <section id="fund" class="section">
+                <div class="glass-card hidden w-full">
+                    <h2>Kế Hoạch Triển Khai</h2>
+                    <div class="card-content cols-2">
+                        <div class="col text-left">
+                            <h3>Phương án gây quỹ</h3>
+                            <p>- Bán nước gây quỹ (Trà đào, trà chanh...)</p>
+                            <p>- Truyền thông mạng xã hội</p>
+                            <p>- Tuyển cộng tác viên hỗ trợ</p>
+                        </div>
+                        <div class="col text-left">
+                            <h3>Lộ trình dự án</h3>
+                            <p>1. Chuẩn bị ý tưởng & nguyên liệu</p>
+                            <p>2. Tổ chức gây quỹ & Truyền thông</p>
+                            <p>3. Tổ chức Workshop tại bệnh viện</p>
+                            <p>4. Tổng kết & Recap</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Vision -->
+            <section id="vision" class="section vision-section">
+                <div class="glass-card hidden w-full">
+                    <h2>Thông Điệp</h2>
+                    <div class="vision-content">
+                        <div class="glowing-orb"></div>
+                        <p class="highlight-text">"Mỗi chiếc đèn là một vì sao nhỏ, mang ánh sáng và hy vọng đến tuổi
+                            thơ của các em."</p>
+                        <button id="btn-donate" class="contact-btn">Ủng Hộ Dự Án</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Donation Modal -->
+    <div id="modal-donation" class="planet-modal hidden-modal" style="justify-content:center; padding:0;">
+        <div class="donation-card glass-card">
+            <button class="close-btn" id="close-donation">&times;</button>
+
+            <!-- STEP 1: Nhập tên -->
+            <div id="donate-step-name">
+                <div class="donation-star-icon">⭐</div>
+                <h2 class="donation-title">Ủng Hộ Dự Án</h2>
+                <p class="donation-sub">Cho bọn mình biết bạn là ai để ghi lại một vì sao nhé!</p>
+                <div class="name-input-wrapper">
+                    <input type="text" id="donor-name" class="donor-input" placeholder="Tên của bạn..." maxlength="40" autocomplete="off">
+                </div>
+                <button id="btn-next-qr" class="donate-confirm-btn">Tiếp tục →</button>
+            </div>
+
+            <!-- STEP 2: Hiện QR -->
+            <div id="donate-step-qr" style="display:none;">
+                <h2 class="donation-title">❤️ Ủng Hộ Dự Án</h2>
+                <p class="donation-sub" id="donation-greeting">Cảm ơn bạn đã muốn gửi một vì sao nhỏ! 🌟</p>
+                <div class="qr-wrapper">
+                    <img id="qr-dynamic" src="" alt="QR Chuyển khoản MB Bank" class="qr-img">
+                </div>
+                <div class="bank-info">
+                    <div class="bank-row">
+                        <span class="bank-label">Chủ tài khoản</span>
+                        <span class="bank-value">CAO CHÍ TRUNG</span>
+                    </div>
+                    <div class="bank-row">
+                        <span class="bank-label">Ngân hàng</span>
+                        <span class="bank-value">MB Bank</span>
+                    </div>
+                    <div class="bank-row">
+                        <span class="bank-label">Số tài khoản</span>
+                        <span class="bank-value highlight-copy" id="copy-phone" title="Nhấn để sao chép">0946 464 102</span>
+                    </div>
+                </div>
+                <p class="transfer-note">Nội dung: <em id="transfer-note-text">[Tên của bạn] đã gửi một vì sao nhỏ cho em</em></p>
+                <button id="btn-thankyou" class="donate-confirm-btn">✨ Tôi đã chuyển khoản!</button>
+                <button id="btn-back-name" class="donate-back-btn">← Đổi tên</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast hidden-toast">
+        <span class="toast-icon">🌟</span>
+        <div>
+            <strong>Cảm ơn bạn rất nhiều!</strong>
+            <p>Sự ủng hộ của bạn sẽ mang lại ánh sáng cho các em nhỏ ⭐</p>
+        </div>
+    </div>
+    <div id="scroll-indicator" class="scroll-indicator">
+        <span>Cuộn xuống hoặc Bấm vào Hành tinh</span>
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+    </div>
+
+    <script src="main.js?v=31"></script>
+</body>
+
+</html>
